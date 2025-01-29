@@ -11,7 +11,34 @@ export const product = defineType({
             validation: (rule) => rule.required(),
             type: "string"
         },
-        
+            {
+                  name: 'content',
+                  type: 'array',
+                  title: 'Content',
+                
+                  of: [{ type: 'block' }],
+                },
+                {
+                  name: 'size',
+                  title: 'Size',
+                  type: 'string',
+                  
+                },
+                {
+                  name: 'category',
+                  title: 'Category',
+                  type: 'string',
+                  options: {
+                    list: ['Dress', 'Electronics', 'Accessories', 'Others'], // Example categories
+                  },
+                                  },
+                {
+                  name: 'quantity',
+                  title: 'Quantity',
+                  type: 'number',
+                  validation: (rule) => rule.required().min(1).error('Quantity must be at least 1'),
+                },
+       
            
        
         {
@@ -21,7 +48,7 @@ export const product = defineType({
             title:"Description",
         },
         {
-            name: "productImage",
+            name: "image",
             type: "image",
             validation: (rule) => rule.required(),
             options: {
@@ -35,21 +62,19 @@ export const product = defineType({
             validation: (rule) => rule.required(),
             title: "Price",
         },
-        {
-            name: "tags",
-            type: "array",
-            title: "Tags",
-            of: [{ type: "string" }]
-        },
+        
         {
             name:"dicountPercentage",
             type:"number",
             title:"Discount Percentage",
-        },
-        {
-            name:"isNew",
-            type:"boolean",
-            title:"New Badge",
-        }
+        },{
+          title: 'Poster',
+          name: 'poster',
+          type: 'image',
+          options: {
+            hotspot: true // <-- Defaults to false
+          },
+          }
+       
     ]
 })
