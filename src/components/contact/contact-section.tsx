@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaPhone } from "react-icons/fa";
 import { FaMapMarkerAlt as FaLocationDot } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
@@ -60,8 +60,8 @@ const ContactSection = () => {
       <section className="flex flex-col items-center mt-10 bg-white">
         <PiArrowBendRightDownThin className="text-blue-400 w-12 h-12 rotate-45 mb-4" />
         <div className="text-center">
-          <h5 className="text-sm font-bold text-gray-900">WE Can't WAIT TO MEET YOU</h5>
-          <h2 className="text-4xl font-bold text-gray-900 mt-4">Let’s Talk</h2>
+          <h5 className="text-sm font-bold text-gray-900">WE Can not WAIT TO MEET YOU</h5>
+          <h2 className="text-4xl font-bold text-gray-900 mt-4">Let s Talk</h2>
         </div>
         <div className="mt-6">
           <button className="px-6 py-3 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600">
@@ -70,7 +70,7 @@ const ContactSection = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
 
 export default ContactSection;
