@@ -16,7 +16,7 @@ export default function CardShop() {
       </div>
 
       {/* Categories Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+      <div className="grid grid-cols-1 sm:items-center md:grid-cols-3 gap-6 ">
         {/* Men */}
         <div className="relative">
           <Image
@@ -30,7 +30,7 @@ export default function CardShop() {
         </div>
 
         {/* Women */}
-        <div className="relative px-0">
+        <div className="relative px-0 items-center">
           <Image
             src={woman}
             alt="Women"
@@ -39,7 +39,7 @@ export default function CardShop() {
          </div>
 
         {/* Accessories and Kids */}
-        <div className="grid grid-rows-2  px-0  gap-6 w-[240px] h-[500px]">
+        <div className="grid grid-rows-2  px-0 sm:items-center gap-6 w-[240px] h-[500px]">
           {/* Accessories */}
           <div className="relative ">
             <Image
@@ -53,7 +53,7 @@ export default function CardShop() {
           </div>
 
           {/* Kids */}
-          <div className="relative px-0">
+          <div className="relative px-0 sm:items-center">
             <Image
               src={kids}
               alt="Kids"
