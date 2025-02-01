@@ -4,7 +4,7 @@ import Header from "@/components/about/header";
 import Footer from "@/components/footer";
 
 
-export default function (){
+export default function products (){
   return(
       <div>
          <Header/>
