@@ -13,7 +13,7 @@ export default function PricingFAQs() {
       {/* FAQ Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* FAQ Item */}
-        {Array(6).fill(0).map((_, index) => (
+        {Array(6).fill(0).map((_:any, index) => (
           <div key={index} className="flex gap-4">
             <div className="text-blue-500 text-xl">&gt;</div>
             <div>
@@ -33,7 +33,7 @@ export default function PricingFAQs() {
       {/* Footer */}
       <div className="text-center mt-12">
         <p className="text-gray-400">
-          Haven't got your answer?{" "}
+          Have not got your answer?{" "}
           <span className="text-blue-500 underline cursor-pointer">
             Contact our support
           </span>
