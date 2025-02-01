@@ -1,5 +1,7 @@
 import Image from "next/image";
 import couple from "@/public/images/asian-woman-man-with-winter-clothes 1.png";
+import { Link } from "lucide-react";
+import Product from "./blog/product";
 
 export default function Whitepart() {
   return (
@@ -28,9 +30,10 @@ export default function Whitepart() {
 
         {/* Buttons */}
         <div className="flex gap-4">
+      
           <button className="px-6 py-3 text-sm font-bold text-white bg-green-600 rounded md:text-base md:px-8 md:py-4">
-            BUY NOW
-          </button>
+         BUY NOW          </button>
+
           <button className="px-6 py-3 text-sm font-bold text-green-600 border border-green-600 rounded md:text-base md:px-8 md:py-4">
             READ MORE
           </button>
