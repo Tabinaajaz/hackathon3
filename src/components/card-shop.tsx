@@ -16,8 +16,12 @@ export default function CardShop() {
       </div>
 
       {/* Categories Grid */}
+<<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6  sm:items-center mx-28 hover:direction-reverse 
      ">
+=======
+      <div className="grid grid-cols-1 sm:items-center md:grid-cols-3 gap-6 ">
+>>>>>>> 18635d5bd1cb01146ecdf0901e6b426b1052e106
         {/* Men */}
         <div className="relative  shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
           <Image
@@ -31,7 +35,11 @@ export default function CardShop() {
         </div>
 
         {/* Women */}
+<<<<<<< HEAD
         <div className="relative  shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+=======
+        <div className="relative px-0 items-center">
+>>>>>>> 18635d5bd1cb01146ecdf0901e6b426b1052e106
           <Image
             src={woman}
             alt="Women"
@@ -41,7 +49,11 @@ export default function CardShop() {
          </div>
 
         {/* Accessories and Kids */}
+<<<<<<< HEAD
         <div className="grid grid-rows-2  px-0  gap-4 w-[240px] h-[500px]">
+=======
+        <div className="grid grid-rows-2  px-0 sm:items-center gap-6 w-[240px] h-[500px]">
+>>>>>>> 18635d5bd1cb01146ecdf0901e6b426b1052e106
           {/* Accessories */}
           <div className="relative shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 ">
             <Image
@@ -56,7 +68,11 @@ export default function CardShop() {
           </div>
 
           {/* Kids */}
+<<<<<<< HEAD
           <div className="relative mt-2  shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+=======
+          <div className="relative px-0 sm:items-center">
+>>>>>>> 18635d5bd1cb01146ecdf0901e6b426b1052e106
             <Image
               src={kids}
               alt="Kids"

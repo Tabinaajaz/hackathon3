@@ -15,15 +15,15 @@ export default function PricingFAQs() {
         {/* FAQ Item */}
         {Array(6).fill(0).map((_:any, index) => (
           <div key={index} className="flex gap-4">
-            <div className="text-blue-500 text-xl">&gt;</div>
+            <div className="text-blue-500 text-xl">&gt</div>
             <div>
               <h4 className="text-lg font-semibold mb-2">
                 the quick fox Jumps over the lazy dog
               </h4>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.
+                Met minim Mollie non desert Alamo est sit cliquey dolor do met sent
                 RELIT official consequent door ENIM RELIT Mollie. Excitation venial
-                consequent sent nostrum met.
+                consequent sent nostrum met
               </p>
             </div>
           </div>
