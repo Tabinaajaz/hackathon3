@@ -1,4 +1,75 @@
+<<<<<<< HEAD
 'use client' 
+=======
+// "use client";
+
+// import { useState } from "react";
+// import { FaStar } from "react-icons/fa";
+// import { useFormState } from "react-dom";
+// import { addReview } from "@/app/pages/addReviews"; // Ensure correct path
+
+// interface Review {
+//   id: string;
+//   name: string;
+//   role: string;
+//   date: string;
+//   review: string;
+//   rating: number;
+// }
+
+// interface ReviewsClientProps {
+//   initialReviews: Review[];
+// }
+
+// const ReviewsClient: React.FC<ReviewsClientProps> = ({ initialReviews }) => {
+//   const [reviews, setReviews] = useState<Review[]>(initialReviews);
+//   const [formState, formAction] = useFormState(addReview, { success: false });
+
+//   const handleSubmit = async (formData: FormData) => {
+//     const result = await formAction(formData);
+//     if (result.success:true) {
+//       setReviews(result.reviews);
+//     } else {
+//       console.error("Failed to add review:", result.error);
+//     }
+//   };
+
+//   return (
+//     <div className="bg-white p-6 rounded-lg shadow-md">
+//       <h2 className="text-2xl font-bold">Reviews</h2>
+//       <div className="space-y-6 mt-4">
+//         {reviews.map((review) => (
+//           <div key={review.id} className="border-b pb-4">
+//             <h3 className="font-bold text-lg">{review.name}</h3>
+//             <p className="text-gray-500">{review.role}</p>
+//             <p className="text-gray-700 mt-2">{review.review}</p>
+//             <div className="flex items-center mt-2">
+//               {[...Array(review.rating)].map((_, i) => (
+//                 <FaStar key={i} className="text-yellow-400" />
+//               ))}
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+
+//       <form action={handleSubmit} className="mt-8 space-y-4">
+//         <input type="text" name="name" placeholder="Your Name" required className="w-full p-2 border rounded" />
+//         <input type="text" name="role" placeholder="Your Role" required className="w-full p-2 border rounded" />
+//         <textarea name="review" placeholder="Your Review" required className="w-full p-2 border rounded"></textarea>
+//         <select name="rating" required className="w-full p-2 border rounded">
+//           {[1, 2, 3, 4, 5].map((value) => (
+//             <option key={value} value={value}>{value} Star{value !== 1 ? "s" : ""}</option>
+//           ))}
+//         </select>
+//         <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded">Submit Review</button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default ReviewsClient;
+"use client";
+>>>>>>> 385f7943c1bb0366a6681416e5c2267dc44b212d
 
 import { useState, useEffect } from "react";
 import { FaStar } from "react-icons/fa";
@@ -119,3 +190,7 @@ export default function ReviewsClient() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 385f7943c1bb0366a6681416e5c2267dc44b212d

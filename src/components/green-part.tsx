@@ -1,6 +1,7 @@
 import Image from "next/image";
 import green from "@/public/images/shop-hero-2-png-picture-1.png";
 
+
 export default function Greenpart() {
     return (
         <div className="relative flex justify-center px-4 md:px-0">
@@ -33,8 +34,8 @@ export default function Greenpart() {
                         </h4>
                         <div className="flex justify-center md:justify-start gap-8 mt-4">
                             <h5 className="text-white text-2xl font-bold">$16.48</h5>
-                            <button className="bg-green-600 px-10 py-4 rounded-full">
-                                <p className="text-white font-montserrat font-bold text-[14px] tracking-[0.2px] text-center">
+                                 <button className="bg-green-600 px-10 py-4 rounded-full">
+                             <p className="text-white font-montserrat font-bold text-[14px] tracking-[0.2px] text-center">
                                     ADD TO CART
                                 </p>
                             </button>

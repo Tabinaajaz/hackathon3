@@ -8,6 +8,10 @@ import {
   SignedOut,
   UserButton
 } from '@clerk/nextjs'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 385f7943c1bb0366a6681416e5c2267dc44b212d
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,8 +26,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+<<<<<<< HEAD
     
 <ClerkProvider>
+=======
+    <ClerkProvider>
+>>>>>>> 385f7943c1bb0366a6681416e5c2267dc44b212d
     <html lang="en">
       <body className={inter.className}>
         {children}

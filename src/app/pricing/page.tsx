@@ -6,7 +6,11 @@ import Pricing from "@/components/about/pricing/pricing";
 import Pricinglist from "@/components/about/pricing/pricing-list";
 import Footer from "@/components/footer";
 
+<<<<<<< HEAD
+export default function (){
+=======
 export default function  pricing (){
+>>>>>>> 18635d5bd1cb01146ecdf0901e6b426b1052e106
     return(
         <div>
             <Header/>

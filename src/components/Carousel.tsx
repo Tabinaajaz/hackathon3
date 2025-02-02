@@ -3,9 +3,15 @@
 import Image from "next/image";
 import card1 from "@/public/image2.jpg"
 import card2 from "@/public/cardss2.jpg"
+<<<<<<< HEAD
 import card3 from "@/public/cardss3.jpeg"
 import card4 from "@/public/cardss4.jpeg"
 import card5 from "@/public/cardss5.jpg"
+=======
+import card3 from "@/public/images/cardss3.jpeg"
+import card4 from "@/public/images/cardss4.jpeg"
+import card5 from "@/public/images/cardss5.jpg"
+>>>>>>> 385f7943c1bb0366a6681416e5c2267dc44b212d
 
 
 import { Swiper, SwiperSlide } from "swiper/react";

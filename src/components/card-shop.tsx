@@ -16,7 +16,16 @@ export default function CardShop() {
       </div>
 
       {/* Categories Grid */}
+<<<<<<< HEAD
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:items-center mx-28 hover:direction-reverse">
+=======
+<<<<<<< HEAD
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6  sm:items-center mx-28 hover:direction-reverse 
+     ">
+=======
+      <div className="grid grid-cols-1 sm:items-center md:grid-cols-3 gap-6 ">
+>>>>>>> 18635d5bd1cb01146ecdf0901e6b426b1052e106
+>>>>>>> 385f7943c1bb0366a6681416e5c2267dc44b212d
         {/* Men */}
         <div className="relative  shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
           <Image
@@ -29,6 +38,7 @@ export default function CardShop() {
           </div>
         </div>
 
+<<<<<<< HEAD
 {/* Women */}
 <div className="relative shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
   <Image
@@ -68,6 +78,58 @@ export default function CardShop() {
   </div>
 </div>
 </div>
+=======
+        {/* Women */}
+<<<<<<< HEAD
+        <div className="relative  shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+=======
+        <div className="relative px-0 items-center">
+>>>>>>> 18635d5bd1cb01146ecdf0901e6b426b1052e106
+          <Image
+            src={woman}
+            alt="Women"
+            layout="responsive"
+            className="w-[240px] h-[500px] rounded-md"
+          />
+         </div>
+
+        {/* Accessories and Kids */}
+<<<<<<< HEAD
+        <div className="grid grid-rows-2  px-0  gap-4 w-[240px] h-[500px]">
+=======
+        <div className="grid grid-rows-2  px-0 sm:items-center gap-6 w-[240px] h-[500px]">
+>>>>>>> 18635d5bd1cb01146ecdf0901e6b426b1052e106
+          {/* Accessories */}
+          <div className="relative shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 ">
+            <Image
+              src={accessories}
+              alt="Accessories"
+              layout="responsive"
+              className="w-[240px] h-[242px] rounded-md"
+            />
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-2 shadow-md font-semibold group-hover:bg-black group-hover:text-white transition">
+              ACCESSORIES
+            </div>
+          </div>
+
+          {/* Kids */}
+<<<<<<< HEAD
+          <div className="relative mt-2  shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+=======
+          <div className="relative px-0 sm:items-center">
+>>>>>>> 18635d5bd1cb01146ecdf0901e6b426b1052e106
+            <Image
+              src={kids}
+              alt="Kids"
+              className="w-[240px] h-[242px] rounded-md"
+            />
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-2 shadow-md font-semibold group-hover:bg-black group-hover:text-white transition">
+              KIDS
+            </div>
+          </div>
+        </div>
+      </div>
+>>>>>>> 385f7943c1bb0366a6681416e5c2267dc44b212d
     </div>
   );
 }
