@@ -30,12 +30,6 @@ const Header = () => {
           {/* Desktop Login/Signup */}
           <div className="hidden md:flex items-center space-x-4">
             <a href="/login" className="text-gray-700 hover:text-blue-500">
-              Login
-            </a>
-            <a
-              href="/signup"
-              className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-600"
-            >
               Become a member
             </a>
           </div>
@@ -64,7 +58,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white shadow-md ml-80 mr-16">
+          <div className="md:hidden bg-white shadow-md pr-14 mx-24 py-2 items-center">
             <nav className="flex flex-col space-y-2   text-left px-4 py-2">
               <a href="/" className="text-gray-700  hover:text-blue-500">
                 Home
@@ -79,14 +73,8 @@ const Header = () => {
                 Contact
               </a>
               <a href="/login" className="text-gray-700 hover:text-blue-500">
-                Login
-              </a>
-              {/* <a
-                href="/signup"
-                className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-600"
-              >
                 Become a member
-              </a> */}
+              </a> 
             </nav>
           </div>
         )}

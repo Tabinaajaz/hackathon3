@@ -16,9 +16,9 @@ export default function CardShop() {
       </div>
 
       {/* Categories Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:items-center mx-28 hover:direction-reverse">
         {/* Men */}
-        <div className="relative">
+        <div className="relative  shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
           <Image
             src={man}
             alt="Men"
@@ -29,42 +29,45 @@ export default function CardShop() {
           </div>
         </div>
 
-        {/* Women */}
-        <div className="relative px-0">
-          <Image
-            src={woman}
-            alt="Women"
-            className="w-[240px] h-[500px] rounded-md"
-          />
-         </div>
+{/* Women */}
+<div className="relative shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+  <Image
+    src={woman}
+    alt="Women"
+    className="w-[540px] h-[500px] rounded-md"
+  />
+  {/* <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-2 shadow-md font-semibold group-hover:bg-black group-hover:text-white transition">
+    WOMEN
+  </div> */}
+</div>
 
-        {/* Accessories and Kids */}
-        <div className="grid grid-rows-2  px-0  gap-6 w-[240px] h-[500px]">
-          {/* Accessories */}
-          <div className="relative ">
-            <Image
-              src={accessories}
-              alt="Accessories"
-              className="w-[240px] h-[242px] rounded-md"
-            />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-2 shadow-md font-semibold group-hover:bg-black group-hover:text-white transition">
-              ACCESSORIES
-            </div>
-          </div>
+{/* Accessories and Kids */}
+<div className="grid grid-rows-2 px-0 gap-4 w-[240px] h-[500px]">
+  {/* Accessories */}
+  <div className="relative shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+    <Image
+      src={accessories}
+      alt="Accessories"
+      className="w-[240px] h-[242px] rounded-md"
+    />
+    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-2 shadow-md font-semibold group-hover:bg-black group-hover:text-white transition">
+      ACCESSORIES
+    </div>
+  </div>
 
-          {/* Kids */}
-          <div className="relative px-0">
-            <Image
-              src={kids}
-              alt="Kids"
-              className="w-[240px] h-[242px] rounded-md"
-            />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-2 shadow-md font-semibold group-hover:bg-black group-hover:text-white transition">
-              KIDS
-            </div>
-          </div>
-        </div>
-      </div>
+  {/* Kids */}
+  <div className="relative shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+    <Image
+      src={kids}
+      alt="Kids"
+      className="w-[240px] h-[242px] rounded-md"
+    />
+    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-2 shadow-md font-semibold group-hover:bg-black group-hover:text-white transition">
+      KIDS
+    </div>
+  </div>
+</div>
+</div>
     </div>
   );
 }

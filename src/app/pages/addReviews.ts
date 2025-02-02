@@ -1,34 +1,81 @@
-"use server"
+// "use server"
 
-import { promises as fs } from "fs"
-import path from "path"
+// import { promises as fs } from "fs"
+// import path from "path"
 
-export async function addReview(formData: FormData) {
-  const name = formData.get("name") as string
-  const role = formData.get("role") as string
-  const review = formData.get("review") as string
-  const rating = Number.parseInt(formData.get("rating") as string)
+// export async function addReview(formData: FormData) {
+//   const name = formData.get("name") as string
+//   const role = formData.get("role") as string
+//   const review = formData.get("review") as string
+//   const rating = Number.parseInt(formData.get("rating") as string)
 
-  const newReview = {
+//   const newReview = {
+//     id: Date.now().toString(),
+//     name,
+//     role,
+//     date: new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }),
+//     review,
+//     rating
+//   }
+
+//   const filePath = path.join(process.cwd(), "data", "reviews.json")
+//   try {
+//     const fileContents = await fs.readFile(filePath, "utf8")
+//     const reviews = JSON.parse(fileContents)
+//     reviews.push(newReview)
+//     await fs.writeFile(filePath, JSON.stringify(reviews, null,0))
+//     return { success: true, reviews }
+//   } catch (error) {
+//     console.error("Error adding review:", error)
+//     return { success: false, error: "Failed to add review" }
+//   }
+// }
+"use server";
+
+import { promises as fs } from "fs";
+import path from "path";
+
+interface Review {
+  id: string;
+  name: string;
+  role: string;
+  date: string;
+  review: string;
+  rating: number;
+}
+
+interface ReviewState {
+  success: boolean;
+  reviews?: Review[];
+  error?: string;
+}
+
+export async function addReview(prevState: ReviewState, formData: FormData): Promise<ReviewState> {
+  const name = formData.get("name") as string;
+  const role = formData.get("role") as string;
+  const review = formData.get("review") as string;
+  const rating = Number.parseInt(formData.get("rating") as string);
+
+  const newReview: Review = {
     id: Date.now().toString(),
     name,
     role,
     date: new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }),
     review,
-    rating
-  }
+    rating,
+  };
 
-  const filePath = path.join(process.cwd(), "data", "reviews.json")
+  const filePath = path.join(process.cwd(), "data", "reviews.json");
+
   try {
-    const fileContents = await fs.readFile(filePath, "utf8")
-    const reviews = JSON.parse(fileContents)
-    reviews.push(newReview)
-    await fs.writeFile(filePath, JSON.stringify(reviews, null, 2))
-    return { success: true, reviews }
+    const fileContents = await fs.readFile(filePath, "utf8");
+    const reviews: Review[] = JSON.parse(fileContents);
+    reviews.push(newReview);
+    await fs.writeFile(filePath, JSON.stringify(reviews, null, 2));
+
+    return { success: true, reviews };
   } catch (error) {
-    console.error("Error adding review:", error)
-    return { success: false, error: "Failed to add review" }
+    console.error("Error adding review:", error);
+    return { success: false, error: "Failed to add review" };
   }
 }
-
-

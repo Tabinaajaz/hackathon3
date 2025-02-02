@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Carousel from "@/components/Carousel";
 import CardShop from "@/components/card-shop";
 import Greenpart from "@/components/green-part";
@@ -79,4 +79,5 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home
+ 
