@@ -18,6 +18,20 @@ export default function CartPage({ params: { id } }: Props) {
   const [reviews, setReviews] = useState([]);
   const [cart, setCart] = useState<Product[]>([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const handleAddToWishlist = () => {
+    if (!product) return;
+  
+    let wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
+  if (wishlist.find((item:any) => item._id === product._id)) {
+    alert("Product is already in the wishlist!");
+    return;
+  }
+  wishlist.push(product);
+  localStorage.setItem("wishlist", JSON.stringify(wishlist));
+  alert("Product added to wishlist!");
+};
+
+  
 
   // ⬇️ Fetch product and reviews on mount
   useEffect(() => {
@@ -123,7 +137,13 @@ export default function CartPage({ params: { id } }: Props) {
 
           <p className="text-gray-700 text-sm lg:text-base">{product.description}</p>
           <div className="flex flex-wrap gap-4">
-            <button className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">♥</button>
+{/* Wishlist Button */}
+<button
+      onClick={handleAddToWishlist}
+      className="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600"
+    >
+      💖 Add to Wishlist
+    </button>
 
             <button
               onClick={handleAddToCart}

@@ -253,7 +253,7 @@ const Navbar = () => {
           <CiShoppingCart className="w-5 h-5" />
         </button>
         <button className="text-blue-500">
-          <MdFavoriteBorder className="w-5 h-5" />
+       <Link href={'/wishlist'}><MdFavoriteBorder className="w-5 h-5" /></Link>   
         </button>
       </div>
     </nav>
