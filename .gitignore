@@ -36,9 +36,7 @@ importData.mjs
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-<<<<<<< HEAD
-.env
-importData.mjs
-=======
 
->>>>>>> 18635d5bd1cb01146ecdf0901e6b426b1052e106
+.env
+importData.
+
