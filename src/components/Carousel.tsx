@@ -1,17 +1,11 @@
-"use client";
+'use client'
 
 import Image from "next/image";
 import card1 from "@/public/image2.jpg"
 import card2 from "@/public/cardss2.jpg"
-<<<<<<< HEAD
 import card3 from "@/public/cardss3.jpeg"
 import card4 from "@/public/cardss4.jpeg"
 import card5 from "@/public/cardss5.jpg"
-=======
-import card3 from "@/public/images/cardss3.jpeg"
-import card4 from "@/public/images/cardss4.jpeg"
-import card5 from "@/public/images/cardss5.jpg"
->>>>>>> 385f7943c1bb0366a6681416e5c2267dc44b212d
 
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -44,15 +38,14 @@ export default function Carousel() {
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
-            <Image
-              src={src}
-              alt={`Slide ${index + 1}`}
-              width={500}
-              height={300}
-              layout="responsive"
-              className="w-full h-[300px] md:h-[716px] object-cover object-center "
-            />
-          
+           <Image
+  src={src}
+  alt={`Slide ${index + 1}`}
+  width={500}
+  height={300}
+  className="w-full h-[300px] md:h-[716px] object-cover object-center"
+/>
+
       {/* Text Overlay */}
       <div className="absolute inset-0 flex flex-col sm:grid-cols-1 items-center md:items-start justify-center text-center md:text-left px-6 md:px-24 md:py-28 gap-5 md:gap-10">
         <h5 className="text-sm md:text-[16px] uppercase tracking-wide font-bold text-white">
