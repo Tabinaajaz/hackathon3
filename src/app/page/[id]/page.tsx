@@ -5,22 +5,16 @@ import Image from "next/image";
 import { FaEye, FaStar} from "react-icons/fa";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
-import { Product } from "../../../../type";
+import { Product, Review } from "../../../../type";
 import { useParams } from "next/navigation";
 import ReviewsClient from "@/components/Reviews_client";
-type Review = {
-  _id: string;
-  text: string;
-  rating: number;
-  date: string;
-};
 
 export default function ProductPage() {
   const { id: productId } = useParams();
   const [product, setProduct] = useState<Product | null>(null);
   const [reviews, setReviews] = useState<Review[]>([]);
   const [cart, setCart] = useState<Product[]>([]);
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalprice, setTotalprice] = useState(0);
 
   useEffect(() => {
     async function fetchProductAndReviews() {
@@ -92,7 +86,7 @@ export default function ProductPage() {
 
   const calculateTotalPrice = (cartItems: Product[]) => {
     const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    setTotalPrice(total);
+    setTotalprice(total);
   };
 
   if (!product) return <div>Loading...</div>;

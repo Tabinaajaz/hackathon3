@@ -27,3 +27,11 @@ export interface Product {
   poster;
 
 totalprice: number;}
+export interface Review {
+  id: string;
+  name: string;
+  role: string;
+  date: string;
+  review: string;
+  rating: number;
+}
