@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { client } from "@/sanity/lib/client";
 import Image from "next/image";
@@ -7,12 +7,10 @@ import { urlFor } from "@/sanity/lib/image";
 import { Product } from "../../../../type";
 import { FaEye, FaStar, FaTrash, FaMinus, FaPlus } from "react-icons/fa";
 import ReviewsClient from "@/components/Reviews_client";
-import { PageProps } from "../../../../.next/types/app/page";
 
-type Props = PageProps & {
+type Props = {
   params: { id: string };
 };
-
 
 export default function ProductPage({ params }: Props) {
   const productId = params.id;
@@ -20,22 +18,21 @@ export default function ProductPage({ params }: Props) {
   const [reviews, setReviews] = useState([]);
   const [cart, setCart] = useState<Product[]>([]);
   const [totalPrice, setTotalPrice] = useState(0);
+
   const handleAddToWishlist = () => {
     if (!product) return;
-  
+
     let wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
-  if (wishlist.find((item:any) => item._id === product._id)) {
-    alert("Product is already in the wishlist!");
-    return;
-  }
-  wishlist.push(product);
-  localStorage.setItem("wishlist", JSON.stringify(wishlist));
-  alert("Product added to wishlist!");
-};
+    if (wishlist.find((item: any) => item._id === product._id)) {
+      alert("Product is already in the wishlist!");
+      return;
+    }
+    wishlist.push(product);
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    alert("Product added to wishlist!");
+  };
 
-  
-
-  // ⬇️ Fetch product and reviews on mount
+  // Fetch product and reviews on mount
   useEffect(() => {
     async function fetchProductAndReviews() {
       try {
@@ -57,14 +54,14 @@ export default function ProductPage({ params }: Props) {
     fetchProductAndReviews();
   }, [productId]);
 
-  // ⬇️ Load cart from LocalStorage
+  // Load cart from LocalStorage
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
     setCart(storedCart);
     calculateTotalPrice(storedCart);
   }, []);
 
-  // ⬇️ Save cart to LocalStorage
+  // Save cart to LocalStorage
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
     calculateTotalPrice(cart);
@@ -139,13 +136,13 @@ export default function ProductPage({ params }: Props) {
 
           <p className="text-gray-700 text-sm lg:text-base">{product.description}</p>
           <div className="flex flex-wrap gap-4">
-{/* Wishlist Button */}
-<button
-      onClick={handleAddToWishlist}
-      className="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600"
-    >
-      💖 Add to Wishlist
-    </button>
+            {/* Wishlist Button */}
+            <button
+              onClick={handleAddToWishlist}
+              className="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600"
+            >
+              💖 Add to Wishlist
+            </button>
 
             <button
               onClick={handleAddToCart}
@@ -154,7 +151,6 @@ export default function ProductPage({ params }: Props) {
               🛒 Add to Cart
             </button>
 
-           
             <button className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">👁️</button>
           </div>
           <div className="flex space-x-4">
