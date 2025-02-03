@@ -2,13 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { FaEye, FaStar, FaTrash, FaMinus, FaPlus } from "react-icons/fa";
+import { FaEye, FaStar} from "react-icons/fa";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
-import ReviewsClient from "@/components/Reviews_client";
-import { Product } from "@/types";
+import { Product } from "../../../../type";
 import { useParams } from "next/navigation";
-
+import ReviewsClient from "@/components/Reviews_client";
 type Review = {
   _id: string;
   text: string;
@@ -135,6 +134,8 @@ export default function ProductPage() {
             <span className="text-xl font-bold text-green-600">${discountedPrice.toFixed(2)}</span>
             <span className="line-through text-gray-500">${product.price.toFixed(2)}</span>
           </div>
+          <div className="flex items-center ">
+          <ReviewsClient reviews={reviews} /></div>
         </div>
       </div>
     </div>
