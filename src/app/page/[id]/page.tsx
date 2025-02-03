@@ -7,7 +7,6 @@ import { urlFor } from "@/sanity/lib/image";
 import { Product } from "../../../../type";
 import { FaEye, FaStar, FaTrash, FaMinus, FaPlus } from "react-icons/fa";
 import ReviewsClient from "@/components/Reviews_client";
-import Link from "next/link";
 
 type Props = {
   params: { id: string };
