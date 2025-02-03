@@ -1,6 +1,5 @@
 import { promises as fs } from "fs";
 import path from "path";
-import { NextResponse } from "next/server";
 
 const filePath = path.join(process.cwd(), "data", "reviews.json");
 
@@ -8,10 +7,10 @@ const filePath = path.join(process.cwd(), "data", "reviews.json");
 export async function GET() {
   try {
     const fileContents = await fs.readFile(filePath, "utf8");
-    return NextResponse.json(JSON.parse(fileContents));
+    return Response.json(JSON.parse(fileContents));
   } catch (error) {
     console.error("❌ Error fetching reviews:", error);
-    return NextResponse.json({ error: "Failed to fetch reviews" }, { status: 500 });
+    return Response.json({ error: "Failed to fetch reviews" }, { status: 500 });
   }
 }
 
@@ -19,8 +18,7 @@ export async function GET() {
 export async function POST(req: Request) {
   try {
     const newReview = await req.json();
-    
-    // Read existing reviews
+
     let reviews = [];
     try {
       const fileContents = await fs.readFile(filePath, "utf8");
@@ -33,9 +31,9 @@ export async function POST(req: Request) {
 
     await fs.writeFile(filePath, JSON.stringify(reviews, null, 2));
 
-    return NextResponse.json({ success: true, reviews });
+    return Response.json({ success: true, reviews });
   } catch (error) {
     console.error("❌ Error saving review:", error);
-    return NextResponse.json({ error: "Failed to save review" }, { status: 500 });
+    return Response.json({ error: "Failed to save review" }, { status: 500 });
   }
 }
