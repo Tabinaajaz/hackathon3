@@ -7,13 +7,15 @@ import { urlFor } from "@/sanity/lib/image";
 import { Product } from "../../../../type";
 import { FaEye, FaStar, FaTrash, FaMinus, FaPlus } from "react-icons/fa";
 import ReviewsClient from "@/components/Reviews_client";
+import { PageProps } from "../../../../.next/types/app/page";
 
-type Props = {
+type Props = PageProps & {
   params: { id: string };
 };
 
-export default function CartPage({ params: { id } }: Props) {
-  const productId = id;
+
+export default function ProductPage({ params }: Props) {
+  const productId = params.id;
   const [product, setProduct] = useState<Product | null>(null);
   const [reviews, setReviews] = useState([]);
   const [cart, setCart] = useState<Product[]>([]);
