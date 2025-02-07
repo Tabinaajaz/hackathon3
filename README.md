@@ -37,7 +37,7 @@ Ideal Store is a fully responsive e-commerce website built with **Next.js 14**, 
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/ideal-store.git
+   git clone https://github.com/Tabinaajaz/hackathon3/tree/main
    cd ideal-store
    ```
 2. Install dependencies:
